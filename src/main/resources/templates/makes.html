@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>results</title>
 <style>
  body {
@@ -9,6 +10,8 @@
             background-size: cover;
             background-position: center;
             height: 100vh;
+             overflow: hidden;
+            
         }
         .form-container {
             background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
@@ -35,6 +38,18 @@
         }
         a{
         color:blue;
+        }
+                @media(max-width:576px){
+                .form-container{
+                            margin-left: 60px;
+                            margin-top: 20px;
+                            display :block;
+                            font-style: italic;
+                             margin-right:10px;
+                            
+                            
+                
+                }
         }
  
   </style>
