@@ -11,6 +11,7 @@ body {
             background-size: cover;
             background-position: center;
             height: 100vh;
+            overflow:hidden;
         }
         .form-container {
             background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
@@ -33,6 +34,29 @@ body {
         margin-top:20px;
          color: navy;
         }
+        @media(max-width:576px){
+         #title{
+                         font-size: 23px;
+                         margin-left: 33px;
+                                 margin-top:8px;
+                         
+                 
+         
+        }
+        .form-container{
+        
+        display:block;
+        margin-top:30px;
+        
+        }
+        #sub {
+        margin-left: 100px;
+        }
+        #er {
+        font-size: 10px;
+        }
+         
+        }
     </style>
     
     
@@ -49,7 +73,7 @@ body {
 				Amount</label> <input type="number" class="form-control"
 				id="exampleInputEmail1" th:field="*{amount}">
 		</div>
-		<div th:if="${errorMsg}" style="color: red;">
+		<div id="er" th:if="${errorMsg}" style="color: red;">
 			<p>[[${errorMsg}]]</p>
 		</div>
 		<div class="mb-3">
