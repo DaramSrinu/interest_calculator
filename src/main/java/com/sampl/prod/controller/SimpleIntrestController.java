@@ -43,7 +43,8 @@ public class SimpleIntrestController {
 		
 		double convertToDouble= Double.parseDouble(formatted); //convert String to Double
 		
-         double totalAmount=convertToDouble+priciple;   // added double and converted string
+         double totalAmount=convertToDouble+priciple; // added double and converted string
+         int roundValue=(int) Math.round(totalAmount); //nearest Value print
 		if (val.getAmount()> 0) {
 			
 
@@ -52,7 +53,7 @@ public class SimpleIntrestController {
 			model.addAttribute("dates", val.getDate());
 			model.addAttribute("todat", val.getToDates());
 		model.addAttribute("total", formatted);
-		model.addAttribute("finalAmount",totalAmount+" /-");
+		model.addAttribute("finalAmount",roundValue+" /-");
 		return "makes";
 			
 		} 
